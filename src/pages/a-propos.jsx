@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom';
 
-export default function aboutMe() {
+export default function AboutMe() {
 
     return(     
             <div>

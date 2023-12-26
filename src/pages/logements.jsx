@@ -1,4 +1,4 @@
-export default function lodgings() {
+export default function Lodgings() {
 
     return(
             <div>

@@ -1,0 +1,13 @@
+.cards{
+    background: $linear-bg-cards;
+    width: 90%;
+    height: 250px;
+    margin-top: 5%;
+    border-radius: 5%;
+    display: flex;
+    align-items: flex-end;
+    &_text{
+        color: white;
+        padding-left: 10px;
+    }
+}

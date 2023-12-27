@@ -7,8 +7,11 @@ export default function AboutMe() {
     return(   
             <div>
                 <Header />  
-                <main>
-                    Cards Compo
+                <main className='main-container'>
+                    <Cards />
+                    <Cards />
+                    <Cards />
+                    <Cards />
                 </main>
                 <footer>
                     footer Compo

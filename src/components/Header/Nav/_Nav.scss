@@ -1,0 +1,21 @@
+.nav-header{
+        color: #F66C6C;
+        position: relative;
+        &_link-home,
+        &_link-about{
+            font-size: clamp(16px, 4vw, 26px);
+            text-decoration: none;
+            padding: 0 10px 0 10px;
+            text-transform: uppercase;
+            &:visited{
+                color: #F66C6C;
+            }
+            &:hover,
+            &:focus{
+                text-decoration: underline;
+            }
+            @media screen and (min-width: $breakpoint-desktop) {
+                text-transform: capitalize;
+            }
+        }
+    }

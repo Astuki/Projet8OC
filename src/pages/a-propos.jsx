@@ -1,14 +1,18 @@
 import { Link } from 'react-router-dom';
+import Header from '../components/Header/header';
+import Cards from '../components/Cards/Cards'
 
 export default function AboutMe() {
 
-    return(     
+    return(   
             <div>
-                <p>Page a propos</p>
-                <nav>
-                    <Link to="/">Accueil</Link>
-                    <Link to ="/logements">Nos Logements</Link>
-                </nav>
+                <Header />  
+                <main>
+                    Cards Compo
+                </main>
+                <footer>
+                    footer Compo
+                </footer>
             </div>
     )
 }

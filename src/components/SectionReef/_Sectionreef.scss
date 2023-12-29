@@ -1,0 +1,13 @@
+.section{
+    margin: 1px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 90%;
+    &_bg-img{
+        width: 100%;
+    }
+    &_bg-text{
+        position: absolute;
+    }
+}

@@ -1,0 +1,21 @@
+.maximum-width{
+    width: 90%;
+    .dropdown{
+        width: 100%;
+        border-radius: 5px;
+        background-color: $primary-color;
+        height: 30px; /* 30phone environ 50 desktop 50-55 */
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-top: 10px;
+        &_text{
+            color: white;
+            padding-left: 5px;
+        }
+        &_upArrow{
+            height: 10px;
+            padding-right: 5px;
+        }
+    }
+}

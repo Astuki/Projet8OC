@@ -97,4 +97,26 @@ body {
   line-height: 24px;
   font-size: 24px;
   left: 40px;
+}
+
+.maximum-width {
+  width: 90%;
+}
+.maximum-width .dropdown {
+  width: 100%;
+  border-radius: 5px;
+  background-color: #ff6060;
+  height: 30px; /* 30phone environ 50 desktop 50-55 */
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 10px;
+}
+.maximum-width .dropdown_text {
+  color: white;
+  padding-left: 5px;
+}
+.maximum-width .dropdown_upArrow {
+  height: 10px;
+  padding-right: 5px;
 }/*# sourceMappingURL=Main.css.map */

@@ -2,25 +2,17 @@ import { Link } from 'react-router-dom';
 import Header from '../components/Header/header';
 import Cards from '../components/Cards/Cards'
 import Footer from '../components/Footer/Footer'
-import Sectionreef from '../components/SectionReef/Sectionreef';
+import Banner from '../components/Banner/Banner';
 
 export default function AboutMe() {
 
     return(   
             <div>
-                <Header />  
-                <main className='container'>
-                    <section>
-                        <Sectionreef />
-                    </section>
-                    <Cards />
-                    <Cards />
-                    <Cards />
-                    <Cards />
+                <Header />
+                <main className='container-homepage'>
+                    <Banner />
                 </main>
-                <footer>
-                    <Footer />
-                </footer>
+                <Footer />
             </div>
     )
 }

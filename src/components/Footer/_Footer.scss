@@ -5,8 +5,12 @@
     justify-content: center;
     width: 100%;
     background-color: $footer-color;
-    padding-top: 5vh;
+    padding-top: 10%;
+    padding-bottom: 8%;
     &_text{
         color: white;
+        font-size: 14px;
+        line-height: 18px;
+        text-align: center;
     }
 }

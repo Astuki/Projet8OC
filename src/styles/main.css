@@ -1,8 +1,13 @@
-.container {
+body {
+  margin: 0;
+}
+
+.container-homepage {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  padding-bottom: 5%;
 }
 
 .nav-header {
@@ -28,6 +33,7 @@
 }
 
 .header {
+  padding-top: 10px;
   width: 100%;
   display: flex;
   align-items: center;
@@ -59,22 +65,36 @@
   justify-content: center;
   width: 100%;
   background-color: #000000;
-  padding-top: 5vh;
+  padding-top: 10%;
+  padding-bottom: 8%;
 }
 .footer_text {
   color: white;
+  font-size: 14px;
+  line-height: 18px;
+  text-align: center;
 }
 
 .section {
-  margin: 1px;
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 90%;
+  width: 100%;
+  padding-top: 5%;
 }
 .section_bg-img {
-  width: 100%;
+  aspect-ratio: 4/1;
+  width: 90%;
+  height: 100px;
+  border-radius: 10px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  filter: brightness(75%);
 }
 .section_bg-text {
   position: absolute;
+  color: white;
+  line-height: 24px;
+  font-size: 24px;
+  left: 40px;
 }/*# sourceMappingURL=Main.css.map */

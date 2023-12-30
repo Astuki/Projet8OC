@@ -1,0 +1,22 @@
+.section{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    padding-top: 5%;
+    &_bg-img{
+        aspect-ratio: 4 / 1;
+        width: 90%;
+        height: 100px;
+        border-radius: 10px;
+        object-fit: cover;
+        filter: brightness(75%);
+    }
+    &_bg-text{
+        position: absolute;
+        color: white;
+        line-height: 24px;
+        font-size: 24px;
+        left: 40px;
+    }
+}

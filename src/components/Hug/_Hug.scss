@@ -36,16 +36,18 @@ p{
 
 .content{
     color: $primary-color;
-    background-color: gray;
     max-height: 0px;
-    overflow: hidden;
-    transition: all 0.5s cubic-bezier(0,1,0,1);
+    visibility: hidden;
+    position: relative;
+    top: -5px;
+    padding: 5px;
+    border-radius: 0px 0px 5px 5px;
+    transition: max-height 0.3s ease;
 }
 
 .content.show{
-    background-color: gray;
-    height: 100px;
-    max-height: 100;
-    overflow: visible;
-    transition: all 0.5s cubic-bezier(1,0,1,0);
+    background-color: $secondary-color;
+    z-index: -1;
+    max-height: 200px;
+    visibility: visible;
 }

@@ -37,10 +37,10 @@ body {
   width: 100%;
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: space-around;
 }
 .header .header-logo {
-  width: 30%;
+  width: 35%;
   margin-left: 2%;
 }
 
@@ -73,6 +73,7 @@ body {
   font-size: 14px;
   line-height: 18px;
   text-align: center;
+  padding-top: 5px;
 }
 
 .section {
@@ -137,16 +138,18 @@ p {
 
 .content {
   color: #ff6060;
-  background-color: gray;
   max-height: 0px;
-  overflow: hidden;
-  transition: all 0.5s cubic-bezier(0, 1, 0, 1);
+  visibility: hidden;
+  position: relative;
+  top: -5px;
+  padding: 5px;
+  border-radius: 0px 0px 5px 5px;
+  transition: max-height 0.3s ease;
 }
 
 .content.show {
-  background-color: gray;
-  height: 100px;
-  max-height: 100;
-  overflow: visible;
-  transition: all 0.5s cubic-bezier(1, 0, 1, 0);
+  background-color: #f7f7f7;
+  z-index: -1;
+  max-height: 200px;
+  visibility: visible;
 }/*# sourceMappingURL=Main.css.map */

@@ -7,9 +7,11 @@ export default function Sectionreef() {
                     <img className="section_bg-img" src={ReefBg}></img>
                     <p className="section_bg-text">
                     Chez vous,
-                    <br></br>
+                    <br className="hide-br"></br>
                     partout et ailleurs
                     </p>
             </div>
     )
 }
+
+/** faire que le texte soit au milieu après breakpoint du scss + voir changer animation flèche collapse avant tutorat + vérifier desktop à propos ( changer banner ) */

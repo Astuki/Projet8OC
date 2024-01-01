@@ -6,6 +6,11 @@
     justify-content: space-around;
     .header-logo{
         width: 35%;
-        margin-left: 2%;
+        max-width: 220px;
+    }
+    @media screen and (min-width: $breakpoint-desktop) {
+        justify-content: space-between;
+        width: 90%;
+        padding-left: 5%;
     }
 }

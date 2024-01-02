@@ -13,7 +13,7 @@ export default function AboutMe() {
             <div>
                 <Header />
                 <main className='container-homepage'>
-                    <Banner imageUrl={proposBg}/>
+                    <Banner imageUrl={proposBg} showText={false}/>
                     <Hug />
                 </main>
                 <Footer />

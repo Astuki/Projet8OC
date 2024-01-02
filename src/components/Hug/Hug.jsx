@@ -50,3 +50,7 @@ export default function Hug() {
         </div>
     )
 }
+
+/** Use param Hook pour logemebts récupérer les id, méthodes filter ou find 
+ * page 404, accueil JSON + logements
+*/

@@ -21,7 +21,8 @@
         font-size: 24px;
         left: 10%;
         @media screen and (min-width: 1000px) {
-            font-size: 35px;
+            font-size: 40px;
+            left: initial;
         }
     }
 }

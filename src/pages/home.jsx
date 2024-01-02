@@ -7,6 +7,8 @@ import Banner from '../components/Banner/Banner';
 import React from "react";
 import { useEffect, useState } from 'react';
 
+import ReefBg from "../assets/homepageBg.png"
+
 export default function Home() {
 
     const [numOfCards, setNumOfCards] = React.useState(4);
@@ -15,11 +17,9 @@ export default function Home() {
         const handleResize = () => {
             setNumOfCards(window.innerWidth > 1280 ? 6 : 3);
         };
-
         handleResize();
 
         window.addEventListener('resize', handleResize);
-
         return () => {
             window.removeEventListener('resize', handleResize);
         };
@@ -30,9 +30,9 @@ export default function Home() {
             <div>
                 <Header />  
                 <main className='container-homepage'>
-                    <Banner />
+                    <Banner imageUrl={ReefBg}/>
                     <section className='grid'>
-                        {[...Array(numOfCards)].map((_, index) => (
+                        {[...Array(numOfCards)].map((_, index) => ( /** map avec les informations du JSON */
                             <Cards key={index} />
                         ))}
                     </section>

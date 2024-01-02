@@ -7,8 +7,8 @@ export default function Footer() {
             <img src={KasaFooterLogo}></img>
 
             <p className="footer_text">
-            © 2020 Kasa, All 
-            <br></br>
+            © 2020 Kasa, All ‎ 
+            <br className='hide-br'></br>
             rights reserved
             </p>
 

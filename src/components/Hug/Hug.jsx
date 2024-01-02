@@ -3,50 +3,61 @@ import downArrow from "../../assets/ArrowForCollapseDown.png"
 import { useState } from "react"
 
 export default function Hug() {
-    const [selected, setSelected] = useState(null); /** true / false  */
-
-    const toggle = (i) => {
-        if (selected === i) {
-            return setSelected(null);
-        }
-
-        setSelected(i);
-    }
-
+    const [selected1, setSelected1] = useState(false);
+    const [selected2, setSelected2] = useState(false);
+    const [selected3, setSelected3] = useState(false);
+    const [selected4, setSelected4] = useState(false);
+  
+    const toggle1 = () => {
+      setSelected1(!selected1);
+    };
+  
+    const toggle2 = () => {
+      setSelected2(!selected2);
+    };
+  
+    const toggle3 = () => {
+      setSelected3(!selected3);
+    };
+  
+    const toggle4 = () => {
+      setSelected4(!selected4);
+    };
+    
     return(
         <div className="maximum-width">
 
-            <div onClick={() => toggle("fiabilite")} className="dropdown">
+            <div onClick={toggle1} className="dropdown">
                 <div className="wrapper">
                     <p className="wrapper_text">Fiabilité</p>
-                    <img className={selected === "fiabilite" ? "rotate-animation" : "wrapper_upArrow"} src={upArrow}></img>
+                    <img className={selected1 ? "rotate-animation" : "wrapper_upArrow"} src={upArrow}></img>
                 </div>
             </div>
-            <p className={selected === "fiabilite" ? "content show" : "content"}>Les annonces postées sur Kasa garantissent une fiabilité totale. Les Photos sont conformes aux logements, et toutes les informations sont régulièrement vérifiées par nos équipes</p>
+            <p className={selected1 ? "content show" : "content"}>Les annonces postées sur Kasa garantissent une fiabilité totale. Les Photos sont conformes aux logements, et toutes les informations sont régulièrement vérifiées par nos équipes</p>
 
-            <div onClick={() => toggle("Respect")} className="dropdown">
+            <div onClick={toggle2} className="dropdown">
                 <div className="wrapper">
                     <p className="wrapper_text">Respect</p>
-                    <img className={selected === "Respect" ? "rotate-animation" : "wrapper_upArrow"} src={upArrow}></img>
+                    <img className={selected2 ? "rotate-animation" : "wrapper_upArrow"} src={upArrow}></img>
                 </div>
             </div>
-            <p className={selected === "Respect" ? "content show" : "content"}>La bienveillance fait partie des valeurs fondatrices de Kasa. Tout Comportement discriminatoire ou de perturbation du voisinage entraînera une exclusion de notre plateforme</p>
+            <p className={selected2 ? "content show" : "content"}>La bienveillance fait partie des valeurs fondatrices de Kasa. Tout Comportement discriminatoire ou de perturbation du voisinage entraînera une exclusion de notre plateforme</p>
 
-            <div onClick={() => toggle("Service")} className="dropdown">
+            <div onClick={toggle3} className="dropdown">
                 <div className="wrapper">
                     <p className="wrapper_text">Service</p>
-                    <img className={selected === "Service" ? "rotate-animation" : "wrapper_upArrow"} src={upArrow}></img>
+                    <img className={selected3 ? "rotate-animation" : "wrapper_upArrow"} src={upArrow}></img>
                 </div>
             </div>
-            <p className={selected === "Service" ? "content show" : "content"}>La bienveillance fait partie des valeurs fondatrices de Kasa. Tout Comportement discriminatoire ou de perturbation du voisinage entraînera une exclusion de notre plateforme</p>
+            <p className={selected3 ? "content show" : "content"}>La bienveillance fait partie des valeurs fondatrices de Kasa. Tout Comportement discriminatoire ou de perturbation du voisinage entraînera une exclusion de notre plateforme</p>
 
-            <div onClick={() => toggle("Sécurité")} className="dropdown">
+            <div onClick={toggle4} className="dropdown">
                 <div className="wrapper">
                     <p className="wrapper_text">Sécurité</p>
-                    <img className={selected === "Sécurité" ? "rotate-animation" : "wrapper_upArrow"} src={upArrow}></img>
+                    <img className={selected4 ? "rotate-animation" : "wrapper_upArrow"} src={upArrow}></img>
                 </div>
             </div>
-            <p className={selected === "Sécurité" ? "content show" : "content"}>La sécurité est la priorité de Kasa. Aussi bien pour nos hôtes que pour les boyageurs, chaque logement correspond aux critères de sécurité établis par nos services. En laissant une note aussi bien à l'hôte qu'au locatoire, cela permet à nos équipes de vérigier que les standards sont bien respectés. Nous organisons également des ateliers sur la sécurité domestique pour nos hôtes</p>
+            <p className={selected4 ? "content show" : "content"}>La sécurité est la priorité de Kasa. Aussi bien pour nos hôtes que pour les boyageurs, chaque logement correspond aux critères de sécurité établis par nos services. En laissant une note aussi bien à l'hôte qu'au locatoire, cela permet à nos équipes de vérigier que les standards sont bien respectés. Nous organisons également des ateliers sur la sécurité domestique pour nos hôtes</p>
         </div>
     )
 }

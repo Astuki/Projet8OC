@@ -28,7 +28,7 @@
             &_upArrow{
                 height: 12px;
                 transform-origin: center;
-                transition: 0.2s ease-in;
+                transition: 0.3s ease-in;
                 transform: rotate(-0.5turn);
             }
         }
@@ -65,7 +65,7 @@ p{
         transform: translateY(-100%);
         opacity: 0;
     }
-    50%{
+    40%{
         opacity: 0;
     }
     90%{
@@ -78,6 +78,6 @@ p{
 
 .rotate-animation{
     height: 12px;
-    transition: 0.2s ease-in;
+    transition: 0.3s ease-in;
     transform-origin: center;
 }

@@ -1,7 +1,6 @@
 .cards{
     height: 255px;
     width: 335px;
-    background: $linear-bg-cards;
     border-radius: 5%;
     display: flex;
     align-items: flex-end;
@@ -9,18 +8,33 @@
         height: 335px;
     }
     &_text{
+        position: absolute;
+        padding-bottom: 15px;
+        padding-left: 10px;
         color: white;
+        font-size: 18px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        max-width: calc(335px - 20px);
     }
     &_img{
+        filter: brightness(75%);
         object-fit: cover;
         width: 340px;
         height: 340px;
         border-radius: 15px;
-   @media (max-width: 1001px) {
-      width: 85vw;
-      height: 250px;
-   }
+        @media (max-width: 1001px) {
+        width: 85vw;
+        height: 250px;
+        }
+    }
+    &_img:hover{
+        filter: brightness(90%);
     }
 }
-
+.cards:hover{
+    cursor: pointer;
+    transform: scale(1.05);
+}
 

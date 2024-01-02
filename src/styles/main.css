@@ -74,7 +74,6 @@ body {
 .cards {
   height: 255px;
   width: 335px;
-  background: linear-gradient(0deg, rgba(0, 0, 0, 0.5) 5%, rgb(255, 96, 96) 100%);
   border-radius: 5%;
   display: flex;
   align-items: flex-end;
@@ -85,9 +84,18 @@ body {
   }
 }
 .cards_text {
+  position: absolute;
+  padding-bottom: 15px;
+  padding-left: 10px;
   color: white;
+  font-size: 18px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  max-width: 315px;
 }
 .cards_img {
+  filter: brightness(75%);
   -o-object-fit: cover;
      object-fit: cover;
   width: 340px;
@@ -99,6 +107,14 @@ body {
     width: 85vw;
     height: 250px;
   }
+}
+.cards_img:hover {
+  filter: brightness(90%);
+}
+
+.cards:hover {
+  cursor: pointer;
+  transform: scale(1.05);
 }
 
 .footer {
@@ -197,7 +213,7 @@ body {
 .maximum-width .dropdown .wrapper_upArrow {
   height: 12px;
   transform-origin: center;
-  transition: 0.2s ease-in;
+  transition: 0.3s ease-in;
   transform: rotate(-0.5turn);
 }
 
@@ -231,7 +247,7 @@ p {
     transform: translateY(-100%);
     opacity: 0;
   }
-  50% {
+  40% {
     opacity: 0;
   }
   90% {
@@ -243,6 +259,6 @@ p {
 }
 .rotate-animation {
   height: 12px;
-  transition: 0.2s ease-in;
+  transition: 0.3s ease-in;
   transform-origin: center;
 }/*# sourceMappingURL=Main.css.map */

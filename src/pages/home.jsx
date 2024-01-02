@@ -11,22 +11,6 @@ import ReefBg from "../assets/homepageBg.png"
 import logements from '../jsondata/logements.json'; 
 
 export default function Home() {
-
-    const [numOfCards, setNumOfCards] = React.useState(4);
-
-    React.useEffect(() => {
-        const handleResize = () => {
-            setNumOfCards(window.innerWidth > 1280 ? 6 : 3);
-        };
-        handleResize();
-
-        window.addEventListener('resize', handleResize);
-        return () => {
-            window.removeEventListener('resize', handleResize);
-        };
-    }, []);
-
-
     return(
             <div>
                 <Header />  

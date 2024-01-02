@@ -86,7 +86,19 @@ body {
 }
 .cards_text {
   color: white;
-  padding-left: 10px;
+}
+.cards_img {
+  -o-object-fit: cover;
+     object-fit: cover;
+  width: 340px;
+  height: 340px;
+  border-radius: 15px;
+}
+@media (max-width: 1001px) {
+  .cards_img {
+    width: 85vw;
+    height: 250px;
+  }
 }
 
 .footer {

@@ -1,8 +1,12 @@
-export default function Cards() {
+import React from 'react';
+import logements from '../../jsondata/logements.json'; 
+
+export default function Cards({ cover, title }) {
 
     return(
         <div className="cards">
-            <p className="cards_text">Titre De La Location</p>
+            <img className="cards_img" src={cover} alt={title}/>
+            <p className="cards_text">{title}</p>
         </div> 
     )
 }

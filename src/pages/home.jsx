@@ -8,6 +8,7 @@ import React from "react";
 import { useEffect, useState } from 'react';
 
 import ReefBg from "../assets/homepageBg.png"
+import logements from '../jsondata/logements.json'; 
 
 export default function Home() {
 
@@ -30,11 +31,11 @@ export default function Home() {
             <div>
                 <Header />  
                 <main className='container-homepage'>
-                    <Banner imageUrl={ReefBg}/>
+                    <Banner imageUrl={ReefBg} showText={true}/>
                     <section className='grid'>
-                        {[...Array(numOfCards)].map((_, index) => ( /** map avec les informations du JSON */
-                            <Cards key={index} />
-                        ))}
+                    {logements.map((logement) => (
+                        <Cards key={logement.id} title={logement.title} cover={logement.cover} />
+                    ))}
                     </section>
                 </main>
                 <Footer />

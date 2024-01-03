@@ -1,5 +1,4 @@
 import upArrow from "../../assets/ArrowForCollapseUp.png"
-import downArrow from "../../assets/ArrowForCollapseDown.png"
 import { useState } from "react"
 
 export default function Hug() {

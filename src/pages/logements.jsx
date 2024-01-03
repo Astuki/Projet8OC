@@ -4,19 +4,17 @@ import logements from '../jsondata/logements.json';
 
 import Header from '../components/Header/header';
 import Footer from '../components/Footer/Footer';
+import Carrousel from '../components/Carrousel/Carrousel';
+import LogementsDesc from '../components/LogementsDesc/LogementsDesc';
 
 export default function Lodgings() {
     const { id } = useParams();
-
-    /**{logements.map((logement) => (
-        console.log(logement.id)
-    ))} */
 
     const [lodging, setLodging] = useState(null);
     const navigate = useNavigate();
 
     useEffect(() => {
-        const selectedLodging = logements.find((lodging) => lodging.id === String(id)); /** parseInt(id) */
+        const selectedLodging = logements.find((lodging) => lodging.id === String(id)); 
 
         if(!selectedLodging) {
             navigate('/404');  
@@ -29,9 +27,9 @@ export default function Lodgings() {
     return(
             <div>
                 <Header />
-                <main className='container-homepage'>
-                     /** Carousel */
-                     /** LogementsDesc */
+                <main className='container-logements'>
+                     <Carrousel />
+                     <LogementsDesc />
                 </main>
                 <Footer />  
             </div>

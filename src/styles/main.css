@@ -68,6 +68,11 @@ body {
   }
 }
 
+.container-logements {
+  text-align: center;
+  padding-bottom: 25px;
+}
+
 /** All the Components */
 .nav-header {
   color: #F66C6C;
@@ -300,4 +305,40 @@ p {
   height: 12px;
   transition: 0.3s ease-in;
   transform-origin: center;
+}
+
+.Wrapper-Carrousel {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 35px;
+}
+.Wrapper-Carrousel_carrouselImg {
+  height: 100%;
+  width: 95%;
+  filter: brightness(75%); /** Bug See Below */
+}
+@media screen and (max-width: 700px) {
+  .Wrapper-Carrousel_carrouselImg {
+    height: 250px;
+    -o-object-fit: cover;
+       object-fit: cover;
+    border-radius: 15px;
+  }
+}
+.Wrapper-Carrousel_ArrowRight {
+  position: relative;
+  right: 8%;
+  width: clamp(1rem, 5vw, 6rem);
+}
+.Wrapper-Carrousel_ArrowLeft {
+  position: relative;
+  left: 8%;
+  z-index: 1; /** Bug without the z-index Arrow disappear when filter brightness is applied BUT it's only on the left Arrow ? */
+  width: clamp(1rem, 5vw, 6rem);
+}
+@media screen and (max-width: 500px) {
+  .Wrapper-Carrousel_ArrowLeft, .Wrapper-Carrousel_ArrowRight {
+    width: 14px;
+  }
 }/*# sourceMappingURL=Main.css.map */

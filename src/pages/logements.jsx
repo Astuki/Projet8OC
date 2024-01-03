@@ -29,7 +29,7 @@ export default function Lodgings() {
                 <Header />
                 <main className='container-logements'>
                      <Carrousel />
-                     <LogementsDesc />
+                     <LogementsDesc lodging={lodging}/>
                 </main>
                 <Footer />  
             </div>

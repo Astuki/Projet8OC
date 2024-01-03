@@ -7,11 +7,16 @@ import Footer from '../components/Footer/Footer';
 
 export default function Lodgings() {
     const { id } = useParams();
+
+    /**{logements.map((logement) => (
+        console.log(logement.id)
+    ))} */
+
     const [lodging, setLodging] = useState(null);
     const navigate = useNavigate();
 
     useEffect(() => {
-        const selectedLodging = logements.find((lodging) => lodging.id === id); /** parseInt(id) */
+        const selectedLodging = logements.find((lodging) => lodging.id === String(id)); /** parseInt(id) */
 
         if(!selectedLodging) {
             navigate('/404');  

@@ -18,7 +18,7 @@ export default function Home() {
                     <Banner imageUrl={ReefBg} showText={true}/>
                     <section className='grid'>
                     {logements.map((logement) => (
-                        <Cards key={logement.id} title={logement.title} cover={logement.cover} />
+                        <Cards key={logement.id} id={logement.id} title={logement.title} cover={logement.cover} />
                     ))}
                     </section>
                 </main>

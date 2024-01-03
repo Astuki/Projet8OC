@@ -1,3 +1,4 @@
+/** SCSS Specific of pages */
 body {
   color: #ff6060;
 }
@@ -67,6 +68,7 @@ body {
   }
 }
 
+/** All the Components */
 .nav-header {
   color: #F66C6C;
   position: relative;

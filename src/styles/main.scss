@@ -1,14 +1,18 @@
 @import 'mixins';
 @import 'vars';
 
+/** SCSS Specific of pages */
 @import 'a-propos';
 @import 'error';
 @import 'homepage';
 @import 'logements';
 
+/** All the Components */
 @import '../components/Header/Nav/Nav';
 @import '../components/Header/Header';
 @import '../components/Cards/Cards';
 @import '../components/Footer/Footer';
 @import '../components/Banner/Banner';
 @import '../components/Hug/Hug';
+@import '../components/LogementsDesc/LogementsDesc';
+@import '../components/Carrousel/Carrousel';

@@ -10,7 +10,7 @@ import proposBg from "../assets/a-proposBg.png"
 export default function AboutMe() {
 
     return(   
-            <div>
+            <div className='main-wrapper'>
                 <Header />
                 <main className='container-homepage'>
                     <Banner imageUrl={proposBg} showText={false}/>

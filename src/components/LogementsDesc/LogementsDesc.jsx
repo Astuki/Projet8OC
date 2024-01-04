@@ -1,5 +1,6 @@
 import React from 'react';
 import Hug from '../Hug/Hug'
+import Rating from '../Rating/Rating';
 
 export default function LogementsDesc({ lodging }) {
     if (!lodging) {
@@ -7,6 +8,11 @@ export default function LogementsDesc({ lodging }) {
         return <div>Loading...</div>;
 
     }
+
+    // Change Format to apply flex-dir: column 
+    const equipmentsList = lodging.equipments.map((equipment, index) => (
+        <li key={index}>{equipment}</li>
+    ));
 
     return (
         <div className='wrapper-logementsDesc'>
@@ -19,7 +25,7 @@ export default function LogementsDesc({ lodging }) {
                 {lodging.tags[2] && <h3>{lodging.tags[2]}</h3>}
             </div>
             <div className='wrapper-logementsDesc_ratingHost'>
-                <div className='rating'>{lodging.rating}</div>
+                <Rating value={lodging.rating} />
                 <div className='host'>
                     <p className='hostName'>{lodging.host.name}</p>
                     <img className='hostImg' src={lodging.host.picture} alt={lodging.host.name}/>
@@ -34,7 +40,7 @@ export default function LogementsDesc({ lodging }) {
                     ]}
                     contents={[
                         `${lodging.description}`,
-                        `${lodging.equipments}`,
+                        equipmentsList,
                     ]}/>
             </div>
             {/* <p>{lodging.description}</p> {/* Hug / Collapse */}

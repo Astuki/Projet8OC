@@ -49,27 +49,46 @@ body {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding-bottom: 25px;
+  padding: 25px 0px 25px 0px;
+  width: 100%;
+}
+@media screen and (max-width: 600px) {
+  .container-homepage {
+    padding: 0px 0px 25px 0px;
+  }
 }
 
 .grid {
-  margin-top: 40px;
-  padding: 55px 35px 55px 35px;
+  margin-top: 30px;
   border-radius: 15px;
   display: grid;
   gap: 25px;
   justify-items: center;
   align-items: center;
 }
-@media screen and (min-width: 1280px) {
+@media screen and (min-width: 1200px) {
   .grid {
-    width: 85%;
+    width: 90%;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(2, 1fr);
-    gap: 30px 30px;
+    gap: 50px 0px;
     background-color: #f7f7f7;
+    padding: 35px 0px 35px 0px;
   }
+}
+@media screen and (min-width: 1600px) {
+  .grid {
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+  }
+}
+
+.main-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
 }
 
 .container-logements {
@@ -79,15 +98,23 @@ body {
   padding-bottom: 25px;
 }
 
+.main-wrapper-logement {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.main-wrapper-logement > .header {
+  width: 95%;
+}
+
 /** All the Components */
 .nav-header {
   color: #F66C6C;
-  position: relative;
 }
 .nav-header_link-home, .nav-header_link-about {
-  font-size: clamp(16px, 5vw, 26px);
+  font-size: 12px;
   text-decoration: none;
-  padding: 0 10px 0 10px;
   text-transform: uppercase;
 }
 .nav-header_link-home:visited, .nav-header_link-about:visited {
@@ -99,15 +126,19 @@ body {
 @media screen and (min-width: 576px) {
   .nav-header_link-home, .nav-header_link-about {
     text-transform: capitalize;
+    font-size: clamp(1rem, 14px + 0.4032vw, 1.5rem);
   }
+}
+.nav-header_link-home {
+  padding-right: 10px;
 }
 
 .header {
   padding-top: 10px;
-  width: 100%;
+  width: 90%;
   display: flex;
   align-items: center;
-  justify-content: space-around;
+  justify-content: space-between;
 }
 .header .header-logo {
   width: 35%;
@@ -117,45 +148,38 @@ body {
   .header {
     justify-content: space-between;
     width: 90%;
-    padding-left: 5%;
   }
 }
 
 .cards {
-  height: 255px;
-  width: 335px;
+  max-height: 255px;
+  max-width: 335px;
   border-radius: 5%;
   display: flex;
   align-items: flex-end;
 }
-@media screen and (min-width: 1280px) {
-  .cards {
-    height: 335px;
-  }
-}
 .cards_text {
   position: absolute;
   padding-bottom: 15px;
-  padding-left: 10px;
   color: white;
   font-size: 18px;
   overflow: hidden;
   text-overflow: ellipsis;
-  white-space: nowrap;
-  max-width: 315px;
+  max-width: 210px;
+  padding-left: 5px;
 }
 .cards_img {
   filter: brightness(75%);
   -o-object-fit: cover;
      object-fit: cover;
-  width: 340px;
-  height: 340px;
+  width: 335px;
+  height: 255px;
   border-radius: 15px;
 }
-@media (max-width: 1001px) {
+@media screen and (max-width: 374px) {
   .cards_img {
-    width: 85vw;
-    height: 250px;
+    max-width: 252px;
+    height: 180px;
   }
 }
 .cards_img:hover {
@@ -196,7 +220,7 @@ body {
   align-items: center;
   justify-content: center;
   width: 100%;
-  padding-top: 25px;
+  padding-top: 15px;
 }
 .section_bg-img {
   aspect-ratio: 4/1;
@@ -298,7 +322,7 @@ p {
   z-index: -1;
   max-height: 350px;
   display: block;
-  padding: 15px;
+  padding: 25px 15px 25px 15px;
   animation: slideDown 0.4s ease-in-out;
 }
 
@@ -318,9 +342,17 @@ p {
   }
 }
 .rotate-animation {
-  height: 10px;
+  height: 12px;
   transition: 0.3s ease-in;
   transform-origin: center;
+}
+
+.equipments-content > li {
+  padding-top: 5px;
+}
+
+li {
+  list-style: none;
 }
 
 .wrapper-logementsDesc {
@@ -343,10 +375,9 @@ p {
   display: flex;
   align-items: center;
   text-wrap: nowrap;
-  justify-content: space-between;
   font-size: 11px; /** 10 ou 11 */
   color: white;
-  gap: 3%;
+  gap: 10px;
 }
 .wrapper-logementsDesc_tags :nth-child(n) {
   margin: 0;
@@ -390,7 +421,7 @@ p {
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-top: 35px;
+  margin-top: 15px;
 }
 .Wrapper-Carrousel_carrouselImg {
   height: 100%;
@@ -420,4 +451,9 @@ p {
   .Wrapper-Carrousel_ArrowLeft, .Wrapper-Carrousel_ArrowRight {
     width: 14px;
   }
+}
+
+.Stars {
+  width: 20px;
+  margin-right: 8px;
 }/*# sourceMappingURL=Main.css.map */

@@ -1,4 +1,6 @@
-
+li{
+    list-style: none;
+}
 
 .wrapper-logementsDesc{
     width: 93%;
@@ -19,10 +21,9 @@
         display: flex;
         align-items: center;
         text-wrap: nowrap;
-        justify-content: space-between;
         font-size: 11px; /** 10 ou 11 */
         color: white;
-        gap: 3%;
+        gap: 10px;
         :nth-child(n) {
             margin: 0;
             padding: 5px 20px 5px 20px;

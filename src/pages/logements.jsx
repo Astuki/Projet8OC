@@ -25,7 +25,7 @@ export default function Lodgings() {
     }, [id, navigate]);
 
     return(
-            <div>
+            <div className='main-wrapper-logement'>
                 <Header />
                 <main className='container-logements'>
                      <Carrousel />

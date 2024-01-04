@@ -1,11 +1,9 @@
 .nav-header{
         color: #F66C6C;
-        position: relative;
         &_link-home,
         &_link-about{
-            font-size: clamp(16px, 5vw, 26px);
+            font-size: 12px;
             text-decoration: none;
-            padding: 0 10px 0 10px;
             text-transform: uppercase;
             &:visited{
                 color: #F66C6C;
@@ -16,6 +14,10 @@
             }
             @media screen and (min-width: $breakpoint-desktop) {
                 text-transform: capitalize;
+                font-size: clamp(1rem, 14px + 0.4032vw, 1.5rem);
             }
+        }
+        &_link-home{
+            padding-right: 10px;
         }
     }

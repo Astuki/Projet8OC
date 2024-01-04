@@ -12,7 +12,7 @@ import logements from '../jsondata/logements.json';
 
 export default function Home() {
     return(
-            <div>
+            <div className='main-wrapper'>
                 <Header />  
                 <main className='container-homepage'>
                     <Banner imageUrl={ReefBg} showText={true}/>

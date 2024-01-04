@@ -4,3 +4,11 @@
     flex-direction: column;
     padding-bottom: 25px;
 }
+.main-wrapper-logement{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+.main-wrapper-logement > .header{
+    width: 95%;
+}

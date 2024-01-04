@@ -1,3 +1,7 @@
+body {
+  font-family: "Montserrat", sans-serif;
+}
+
 /** SCSS Specific of pages */
 body {
   color: #ff6060;
@@ -69,7 +73,9 @@ body {
 }
 
 .container-logements {
-  text-align: center;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
   padding-bottom: 25px;
 }
 
@@ -250,15 +256,25 @@ body {
   padding-right: 25px;
 }
 .maximum-width .dropdown .wrapper_text {
-  font-size: 24px;
+  font-size: 16px;
   color: white;
   padding-left: 25px;
 }
+@media screen and (min-width: 700px) {
+  .maximum-width .dropdown .wrapper_text {
+    font-size: 24px;
+  }
+}
 .maximum-width .dropdown .wrapper_upArrow {
-  height: 12px;
+  height: 10px;
   transform-origin: center;
   transition: 0.3s ease-in;
-  transform: rotate(-0.5turn);
+  transform: rotate(0.5turn);
+}
+@media screen and (min-width: 700px) {
+  .maximum-width .dropdown .wrapper_upArrow {
+    height: 12px;
+  }
 }
 
 p {
@@ -266,7 +282,7 @@ p {
 }
 
 .content {
-  font-size: 24px;
+  font-size: 18px;
   color: #ff6060;
   max-height: 0px;
   display: none;
@@ -280,7 +296,7 @@ p {
 .content.show {
   background-color: #f7f7f7;
   z-index: -1;
-  max-height: 200px;
+  max-height: 350px;
   display: block;
   padding: 15px;
   animation: slideDown 0.4s ease-in-out;
@@ -302,9 +318,72 @@ p {
   }
 }
 .rotate-animation {
-  height: 12px;
+  height: 10px;
   transition: 0.3s ease-in;
   transform-origin: center;
+}
+
+.wrapper-logementsDesc {
+  width: 93%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+.wrapper-logementsDesc_title {
+  margin: 15px 0px 10px 0px;
+  font-weight: 500;
+}
+.wrapper-logementsDesc_location {
+  margin: 0px 0px 10px 0px;
+  font-weight: 500;
+}
+.wrapper-logementsDesc_tags {
+  width: 75%;
+  display: flex;
+  align-items: center;
+  text-wrap: nowrap;
+  justify-content: space-between;
+  font-size: 11px; /** 10 ou 11 */
+  color: white;
+  gap: 3%;
+}
+.wrapper-logementsDesc_tags :nth-child(n) {
+  margin: 0;
+  padding: 5px 20px 5px 20px;
+  background-color: #ff6060;
+  border-radius: 10px;
+  font-weight: 500;
+}
+.wrapper-logementsDesc_ratingHost {
+  margin-top: 15px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.wrapper-logementsDesc_ratingHost .rating {
+  display: flex;
+  /** 5 stars to put */
+}
+.wrapper-logementsDesc_ratingHost .host {
+  display: flex;
+  align-items: center;
+}
+.wrapper-logementsDesc_ratingHost .host .hostName {
+  font-size: 12px;
+  width: 50px;
+}
+.wrapper-logementsDesc_ratingHost .host .hostImg {
+  width: 32px;
+  border-radius: 50%;
+}
+.wrapper-logementsDesc_Hug {
+  width: 100%;
+}
+.wrapper-logementsDesc_Hug .maximum-width {
+  width: 100%;
+  font-size: 14px;
 }
 
 .Wrapper-Carrousel {

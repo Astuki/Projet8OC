@@ -21,15 +21,21 @@
             align-items: center;
             padding-right: 25px;
             &_text{
-                font-size: 24px;
+                font-size: 16px;
                 color: white;
                 padding-left: 25px;
+                @media screen and (min-width: 700px) {
+                    font-size: 24px;
+                }
             }
             &_upArrow{
-                height: 12px;
+                height: 10px;
                 transform-origin: center;
                 transition: 0.3s ease-in;
-                transform: rotate(-0.5turn);
+                transform: rotate(0.5turn);
+                @media screen and (min-width: 700px) {
+                    height: 12px;
+                }
             }
         }
     }
@@ -40,7 +46,7 @@ p{
 }
 
 .content{
-    font-size: 24px;
+    font-size: 18px;
     color: $primary-color;
     max-height: 0px;
     display: none;
@@ -54,7 +60,7 @@ p{
 .content.show{
     background-color: $secondary-color;
     z-index: -1;
-    max-height: 200px;
+    max-height: 350px;
     display: block;
     padding: 15px;
     animation: slideDown 0.4s ease-in-out;
@@ -77,7 +83,7 @@ p{
 }
 
 .rotate-animation{
-    height: 12px;
+    height: 10px;
     transition: 0.3s ease-in;
     transform-origin: center;
 }

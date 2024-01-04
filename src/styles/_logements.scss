@@ -1,4 +1,6 @@
 .container-logements{
-    text-align: center;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
     padding-bottom: 25px;
 }

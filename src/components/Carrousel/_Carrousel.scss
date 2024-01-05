@@ -5,32 +5,49 @@
     justify-content: center;
     margin-top: 15px;
     &_carrouselImg{
-        height: 100%;
-        width: 95%;
         filter: brightness(75%); /** Bug See Below */
+        border-radius: 25px;
+        max-height: 400px;
+        width: 90%;
+        object-fit: cover;
+        aspect-ratio: 3 / 1;
     }
     @media screen and (max-width: 700px) {
         &_carrouselImg{
             height: 250px;
             object-fit: cover;
             border-radius: 15px;
+            width: 100%;
         }
     }
     &_ArrowRight{
         position: relative;
         right: 8%;
-        width: clamp(1rem, 5vw, 6rem);
+        width: 14px;
     }
     &_ArrowLeft{
         position: relative;
         left: 8%;
         z-index: 1; /** Bug without the z-index Arrow disappear when filter brightness is applied BUT it's only on the left Arrow ? */
-        width: clamp(1rem, 5vw, 6rem);
+        width: 14px;
     }
     @media screen and (max-width: 500px) {
         &_ArrowLeft, &_ArrowRight {
           width: 14px;
         }
     }
+    @media screen and (min-width: 701px) {
+        &_ArrowRight, &_ArrowLeft{
+            width: 40px;
+        }
+    }
 }
-
+.Counter{
+    display: none;
+    @media screen and (min-width: 701px) {
+        display: inline;
+        color: white;
+        transform: translateY(-50px);
+        font-size: 22px; // Adjust the font size as needed
+    }
+}

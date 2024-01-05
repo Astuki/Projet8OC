@@ -42,7 +42,6 @@ export default function LogementsDesc({ lodging }) {
                         equipmentsList,
                     ]}/>
             </div>
-            {/* <p>{lodging.description}</p> {/* Hug / Collapse */}
         </div>
     )
 }

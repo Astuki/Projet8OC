@@ -61,6 +61,26 @@ li{
             }
         }
     }
+    @media screen and (min-width: 600px) {
+        &_ratingHost{
+            flex-direction: column-reverse;
+            align-items: flex-end;
+            gap: 30px;
+            transform: translateY(-125px);
+            .host{
+                .hostName{
+                    font-size: 20px;
+                    width: 90px;
+                    line-height: 22px;
+                    text-align: center;
+                }
+                .hostImg{
+                    width: 58px;
+                    border-radius: 50%;
+                }
+            }
+        }
+    }
     &_Hug{
         width: 100%;
         padding-top: 5px;
@@ -69,4 +89,12 @@ li{
             font-size: 14px;
         }
     }
+    @media screen and (min-width: 600px) {
+        &_Hug{
+            .maximum-width{
+                width: 50%;
+            }
+        }
+    }
 }
+

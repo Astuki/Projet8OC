@@ -26,9 +26,9 @@ export default function Lodgings() {
 
     return(
             <div className='main-wrapper-logement'>
-                <Header />
+                <Header hasCarrousel={lodging && lodging.pictures && lodging.pictures.length > 0} />
                 <main className='container-logements'>
-                     <Carrousel />
+                     <Carrousel lodging={lodging}/>
                      <LogementsDesc lodging={lodging}/>
                 </main>
                 <Footer />  

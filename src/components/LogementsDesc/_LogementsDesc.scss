@@ -2,8 +2,9 @@ li{
     list-style: none;
 }
 
+
 .wrapper-logementsDesc{
-    width: 93%;
+    width: 90%;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -17,19 +18,22 @@ li{
         font-weight: 500;
     }
     &_tags{
-        width: 75%;
+        width: 85%;
         display: flex;
         align-items: center;
         text-wrap: nowrap;
-        font-size: 11px; /** 10 ou 11 */
+        font-size: 10px; /** 10 ou 11 */
         color: white;
         gap: 10px;
+        flex-wrap: wrap;  
         :nth-child(n) {
             margin: 0;
-            padding: 5px 20px 5px 20px;
+            padding: 5px 5px 5px 5px;
             background-color: $primary-color;
             border-radius: 10px;
             font-weight: 500;
+            width: 110px;
+            text-align: center;
         }
     }
     &_ratingHost{
@@ -40,7 +44,6 @@ li{
         align-items: center;
         .rating{
             display: flex;
-             /** 5 stars to put */
         }
         .host{
             display: flex;
@@ -48,6 +51,9 @@ li{
             .hostName{
                 font-size: 12px;
                 width: 50px;
+                line-height: 16px;
+                padding-right: 5px;
+                text-align: center;
             }
             .hostImg{
                 width: 32px;
@@ -57,6 +63,7 @@ li{
     }
     &_Hug{
         width: 100%;
+        padding-top: 5px;
         .maximum-width{
             width: 100%;
             font-size: 14px;

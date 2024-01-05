@@ -20,14 +20,12 @@
         position: relative;
         right: 8%;
         width: clamp(1rem, 5vw, 6rem);
-
     }
     &_ArrowLeft{
         position: relative;
         left: 8%;
         z-index: 1; /** Bug without the z-index Arrow disappear when filter brightness is applied BUT it's only on the left Arrow ? */
         width: clamp(1rem, 5vw, 6rem);
-
     }
     @media screen and (max-width: 500px) {
         &_ArrowLeft, &_ArrowRight {

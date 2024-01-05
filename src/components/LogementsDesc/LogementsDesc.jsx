@@ -8,8 +8,7 @@ export default function LogementsDesc({ lodging }) {
         return <div>Loading...</div>;
 
     }
-
-    // Change Format to apply flex-dir: column 
+ 
     const equipmentsList = lodging.equipments.map((equipment, index) => (
         <li key={index}>{equipment}</li>
     ));

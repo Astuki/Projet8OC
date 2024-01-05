@@ -357,6 +357,12 @@ p {
   padding-top: 5px;
 }
 
+@media screen and (min-width: 600px) {
+  .logement-page {
+    display: flex;
+    flex-direction: row;
+  }
+}
 li {
   list-style: none;
 }
@@ -425,7 +431,8 @@ li {
     flex-direction: column-reverse;
     align-items: flex-end;
     gap: 30px;
-    transform: translateY(-125px);
+    margin: 0;
+    height: 0px;
   }
   .wrapper-logementsDesc_ratingHost .host .hostName {
     font-size: 20px;
@@ -448,7 +455,8 @@ li {
 }
 @media screen and (min-width: 600px) {
   .wrapper-logementsDesc_Hug .maximum-width {
-    width: 50%;
+    width: 100%;
+    gap: 50px;
   }
 }
 
@@ -473,7 +481,7 @@ li {
     -o-object-fit: cover;
        object-fit: cover;
     border-radius: 15px;
-    width: 100%;
+    width: 90%;
   }
 }
 .Wrapper-Carrousel_ArrowRight {
@@ -514,7 +522,7 @@ li {
   width: 20px;
   margin-right: 8px;
 }
-@media screen and (min-width: 850px) {
+@media screen and (min-width: 600px) {
   .Stars {
     width: 25px;
   }

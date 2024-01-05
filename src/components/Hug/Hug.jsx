@@ -1,7 +1,10 @@
 import downArrow from "../../assets/ArrowForCollapseDown.png"
 import { useState } from "react"
 
-export default function Hug({ showDropdowns = [true, true, false, false], contents = [], titles = [], }) {
+export default function Hug({ showDropdowns = [true, true, false, false], contents = [], titles = [], IsLogementPage}) {
+
+    const logementPage = IsLogementPage ? "maximum-width logement-page" : "maximum-width";
+
     const [selected1, setSelected1] = useState(false);
     const [selected2, setSelected2] = useState(false);
     const [selected3, setSelected3] = useState(false);
@@ -24,7 +27,7 @@ export default function Hug({ showDropdowns = [true, true, false, false], conten
     };
     
     return(
-        <div className="maximum-width">
+        <div className={logementPage}>
           {showDropdowns[0] && (
             <div onClick={toggle1} className="dropdown">
                 <div className="wrapper">

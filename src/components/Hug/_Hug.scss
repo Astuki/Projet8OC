@@ -91,3 +91,10 @@ p{
 .equipments-content > li{
     padding-top: 5px;
 }
+
+@media screen and (min-width: 600px) {
+    .logement-page{
+        display: flex;
+        flex-direction: row;
+    }
+}

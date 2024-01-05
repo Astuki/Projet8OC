@@ -40,7 +40,9 @@ export default function LogementsDesc({ lodging }) {
                     contents={[
                         `${lodging.description}`,
                         equipmentsList,
-                    ]}/>
+                    ]}
+                    IsLogementPage={lodging && lodging.host.picture }
+                    />
             </div>
         </div>
     )

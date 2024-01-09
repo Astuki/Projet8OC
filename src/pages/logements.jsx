@@ -36,3 +36,6 @@ export default function Lodgings() {
     )
 }
 
+/** Quand dans le carroussel il n'y a qu'une image retirer le compteur et les flèches  */
+/** Error404 header collé à gauche  */
+/** voir lors évaluation   */

@@ -1,6 +1,7 @@
 import React from 'react';
 import Hug from '../Hug/Hug'
 import Rating from '../Rating/Rating';
+import Collapse from '../Collapse/Collapse'
 
 export default function LogementsDesc({ lodging }) {
     if (!lodging) {
@@ -31,7 +32,8 @@ export default function LogementsDesc({ lodging }) {
                 </div>
             </div>
             <div className='wrapper-logementsDesc_Hug'>
-                <Hug 
+                {/**
+                 * <Hug 
                     showDropdowns={[true, true, false, false]}
                     titles ={[
                         "Description",
@@ -42,7 +44,16 @@ export default function LogementsDesc({ lodging }) {
                         equipmentsList,
                     ]}
                     IsLogementPage={lodging && lodging.host.picture }
-                    />
+                />
+                */}
+                <Collapse 
+                title="Description"
+                content={lodging.description}
+                />
+                <Collapse 
+                title="Equipements"
+                content={lodging.equipments}
+                />
             </div>
         </div>
     )

@@ -1,0 +1,92 @@
+.collapse-container {
+  position: relative;
+  cursor: pointer;
+  width: 100%;
+
+  &__title {
+    background-color: #ff6060;
+    border-radius: 10px;
+    padding: 10px 20px 10px 15px;
+    color: white;
+    text-align: left;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    font-size: 24px;
+
+    svg {
+      transition: 200ms;
+    }
+
+    &--open svg {
+      rotate: 180deg;
+    }
+  }
+
+  &__content {
+    background-color: #f6f6f6;
+    border-radius: 5px;
+    overflow: hidden;
+    transition: height 300ms;
+    width: 100%;
+    color: #ff6060;
+    font-size: 18px;
+    text-align: left;
+    padding: 0 20px;
+
+    p,
+    ul {
+      width: 100%;
+    }
+
+    &--hide {
+      height: 0px;
+    }
+
+    &__arrow {
+      position: absolute;
+      right: 5%;
+      top: 18px;
+      transition: 0.2s ease-in;
+      transform: rotate(-0.5turn);
+      cursor: pointer;
+
+      &--open {
+        position: absolute;
+        right: 5%;
+        top: 18px;
+        transition: 0.2s ease-in;
+        cursor: pointer;
+      }
+
+      &__content {
+        overflow: hidden;
+        transition: 0.2s ease-in;
+        color: $primary-color;
+
+        &--open {
+          background-color: #f6f6f6;
+          color: $primary-color;
+          width: 100%;
+          /** @include Montserrat-500; */
+          font-size: 16px;
+          border-radius: 5px;
+          transition: 0.2s ease-in;
+          text-align: left;
+          padding: 20px 0;
+        }
+      }
+    }
+  }
+
+  @media screen and (max-width: 500px) {
+    &__title-txt {
+      color: #fff;
+      /** @include Montserrat-500; */
+      font-size: 13px;
+      font-style: normal;
+      font-weight: 500;
+      line-height: 142.6%;
+    }
+  }
+}

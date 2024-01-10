@@ -7,6 +7,13 @@ body {
   color: #ff6060;
 }
 
+.body-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
 .main-Wrapper {
   display: flex;
   flex-direction: column;

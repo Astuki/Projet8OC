@@ -6,7 +6,7 @@ import { Link } from 'react-router-dom';
 export default function Error404() {
 
     return(
-            <div>
+            <div className='body-wrapper'>
                 <Header />
                 <main className='main-Wrapper'>
                     <span className='main-Wrapper_Error'>404</span>

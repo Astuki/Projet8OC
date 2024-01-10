@@ -27,4 +27,4 @@ export default function AboutMe() {
     )
 }
 
-/** arranger avec le SCSS */
+

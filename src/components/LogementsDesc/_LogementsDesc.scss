@@ -23,7 +23,7 @@ li{
         display: flex;
         align-items: center;
         text-wrap: nowrap;
-        font-size: 10px; /** 10 ou 11 */
+        font-size: 10px; 
         color: white;
         gap: 10px;
         flex-wrap: wrap;  
@@ -104,3 +104,13 @@ li{
     }
 }
 
+
+@media screen and (min-width: 860px) {
+    .wrapper-logementsDesc_Hug{
+        display: flex;
+        flex-direction: row;
+        .collapse-container{
+            width: 50%;
+        }
+    }
+}

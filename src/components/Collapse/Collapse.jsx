@@ -16,7 +16,7 @@ const Collapse = ({ title, content }) => {
   
       if (isOpen) {
           if (screenWidth > 800) {
-              setHeight(ref.current?.getBoundingClientRect().height * 2);
+              setHeight(ref.current?.getBoundingClientRect().height * 1.4);
           } else {
               setHeight(ref.current?.getBoundingClientRect().height + 25);
           }

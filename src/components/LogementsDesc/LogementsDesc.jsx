@@ -36,25 +36,10 @@ export default function LogementsDesc({ lodging }) {
                 />
                 <Collapse 
                 title="Equipements"
-                content={lodging.equipments}
+                content={equipmentsList}
                 />
             </div>
         </div>
     )
 }
 
-
-{/**
-                 * <Hug 
-                    showDropdowns={[true, true, false, false]}
-                    titles ={[
-                        "Description",
-                        "Equipements",
-                    ]}
-                    contents={[
-                        `${lodging.description}`,
-                        equipmentsList,
-                    ]}
-                    IsLogementPage={lodging && lodging.host.picture }
-                />
-                */}

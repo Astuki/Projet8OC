@@ -35,6 +35,3 @@ export default function Lodgings() {
             </div>
     )
 }
-
-/** Error404 header collé à gauche  */
-/** voir lors évaluation   */

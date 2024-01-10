@@ -10,6 +10,7 @@ li{
     justify-content: center;
     align-items: flex-start;
     &_title{
+        font-size: 30px;
         margin: 15px 0px 10px 0px;
         font-weight: 500;
     }
@@ -49,10 +50,10 @@ li{
             display: flex;
             align-items: center;
             .hostName{
-                font-size: 12px;
-                width: 50px;
+                font-size: 14px;
+                width: 60px;
                 line-height: 16px;
-                padding-right: 5px;
+                padding-right: 10px;
                 text-align: center;
             }
             .hostImg{
@@ -61,7 +62,7 @@ li{
             }
         }
     }
-    @media screen and (min-width: 600px) {
+    @media screen and (min-width: 860px) {
         &_ratingHost{
             flex-direction: column-reverse;
             align-items: flex-end;
@@ -70,7 +71,7 @@ li{
             height: 0px;
             .host{
                 .hostName{
-                    font-size: 20px;
+                    font-size: 18px;
                     width: 90px;
                     line-height: 22px;
                     text-align: center;
@@ -83,8 +84,11 @@ li{
         }
     }
     &_Hug{
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
         width: 100%;
-        padding-top: 5px;
+        margin-top: 15px;
         .maximum-width{
             width: 100%;
             font-size: 14px;

@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import rightArrow from "../../assets/ArrowRight.png";
 import leftArrow from "../../assets/ArrowLeft.png";
-import logements from "../../jsondata/logements.json"
 
 export default function Carrousel({ lodging }) {
     if (!lodging || !lodging.pictures) {
@@ -19,14 +18,16 @@ export default function Carrousel({ lodging }) {
         setCurrentImage((prevImage) => (prevImage === 1 ? totalImages : prevImage - 1));
     };
 
+    const isSingleImage = totalImages === 1;
+
     return (
         <>
-            <div className="Wrapper-Carrousel">
+            <div className={`Wrapper-Carrousel ${isSingleImage ? 'single-image' : ''}`}>
                 <img className="Wrapper-Carrousel_ArrowLeft" src={leftArrow} onClick={handlePrevImage} alt="Left Arrow" />
                 <img className="Wrapper-Carrousel_carrouselImg" src={lodging.pictures[currentImage - 1]} alt={`Image ${currentImage}`} />
                 <img className="Wrapper-Carrousel_ArrowRight" src={rightArrow} onClick={handleNextImage} alt="Right Arrow" />
             </div>
-            <div className="Counter">{`${currentImage}/${totalImages}`}</div> 
+            {!isSingleImage && <div className="Counter">{`${currentImage}/${totalImages}`}</div>}
         </>
     );
 }

@@ -1,5 +1,4 @@
 import React from 'react';
-import Hug from '../Hug/Hug'
 import Rating from '../Rating/Rating';
 import Collapse from '../Collapse/Collapse'
 
@@ -16,7 +15,6 @@ export default function LogementsDesc({ lodging }) {
 
     return (
         <div className='wrapper-logementsDesc'>
-            {/* <img src={lodging.pictures[0]} alt={lodging.title} />  For Carrousel need to add this line of code instead of the buddha thingy */}
             <h1 className='wrapper-logementsDesc_title'>{lodging.title}</h1>
             <h2 className='wrapper-logementsDesc_location'>{lodging.location}</h2>
             <div className='wrapper-logementsDesc_tags'>
@@ -32,7 +30,21 @@ export default function LogementsDesc({ lodging }) {
                 </div>
             </div>
             <div className='wrapper-logementsDesc_Hug'>
-                {/**
+                <Collapse 
+                title="Description"
+                content={lodging.description}
+                />
+                <Collapse 
+                title="Equipements"
+                content={lodging.equipments}
+                />
+            </div>
+        </div>
+    )
+}
+
+
+{/**
                  * <Hug 
                     showDropdowns={[true, true, false, false]}
                     titles ={[
@@ -46,15 +58,3 @@ export default function LogementsDesc({ lodging }) {
                     IsLogementPage={lodging && lodging.host.picture }
                 />
                 */}
-                <Collapse 
-                title="Description"
-                content={lodging.description}
-                />
-                <Collapse 
-                title="Equipements"
-                content={lodging.equipments}
-                />
-            </div>
-        </div>
-    )
-}

@@ -47,6 +47,14 @@
         display: inline;
         color: white;
         transform: translateY(-50px);
-        font-size: 22px; // Adjust the font size as needed
+        font-size: 22px; 
+    }
+}
+
+.single-image {
+    .Wrapper-Carrousel_ArrowLeft,
+    .Wrapper-Carrousel_ArrowRight,
+    .Counter {
+      display: none;
     }
 }

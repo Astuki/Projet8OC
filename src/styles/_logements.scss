@@ -16,3 +16,11 @@ body {
 .main-wrapper-logement > .header{
     width: 95%;
 }
+
+.about-collapse-container{
+    padding-top: 15px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 90%;
+}

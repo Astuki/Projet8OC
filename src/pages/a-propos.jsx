@@ -1,9 +1,6 @@
-import { Link } from 'react-router-dom';
 import Header from '../components/Header/header';
-import Cards from '../components/Cards/Cards'
 import Footer from '../components/Footer/Footer'
 import Banner from '../components/Banner/Banner';
-import Hug from '../components/Hug/Hug'
 import Collapse from '../components/Collapse/Collapse'
 import aboutJSON from '../jsondata/about.json'
 

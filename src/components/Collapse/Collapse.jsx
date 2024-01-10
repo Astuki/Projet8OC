@@ -2,19 +2,28 @@ import { useState, useRef, useEffect } from "react"
 import upArrow from "../../assets/ArrowForCollapseUp.png"
 
 const Collapse = ({ title, content }) => {
-    const [isClosed, setIsCollapsed] = useState(false);
+    const [isOpen, setIsOpen] = useState(false);
   
     const toggleCollapse = () => {
-      setIsCollapsed(!isClosed);
+      setIsOpen(!isOpen);
     };
   
 
     const ref = useRef(null)
 
     useEffect(() => {
-        if(isClosed) setHeight(ref.current?.getBoundingClientRect().height)
-        else setHeight(0)
-    }, [isClosed])
+      const screenWidth = window.innerWidth;
+  
+      if (isOpen) {
+          if (screenWidth > 800) {
+              setHeight(ref.current?.getBoundingClientRect().height * 2);
+          } else {
+              setHeight(ref.current?.getBoundingClientRect().height + 25);
+          }
+      } else {
+          setHeight(0);
+      }
+  }, [isOpen]);
 
     const [height, setHeight] = useState(0)
 
@@ -22,15 +31,15 @@ const Collapse = ({ title, content }) => {
       <div key={title} onClick={toggleCollapse} className="collapse-container">
         <div
           className={`collapse-container__title ${
-            isClosed ? "" : "collapse-container__title--open"
+            isOpen ? "" : "collapse-container__title--open"
           }`}
         >
           <span className="collapse-container__title-txt">{title}</span>
-          <img className={isClosed ? 'collapse-container__content__arrow' : 'collapse-container__content__arrow--open'} src={upArrow}/>
+          <img className={isOpen ? 'collapse-container__content__arrow' : 'collapse-container__content__arrow--open'} src={upArrow}/>
         </div>
   
         <div
-          className={isClosed ? 'collapse-container__content--open' : 'collapse-container__content'} style={{height}}
+          className={isOpen ? 'collapse-container__content--open' : 'collapse-container__content'} style={{height}}
         >
 
         <div ref={ref}>

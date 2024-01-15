@@ -101,8 +101,7 @@
   align-items: center;
   justify-content: flex-start;
 
-
-  max-height: 160px; /* Ajout de cette max-height pour que les 2 background gris des Collapse soient tout les deux au même niveau ( dans logement ) */
+  max-height: 190px; /* Ajout de cette max-height pour éviter de trop gros écarts de height entre description et Equipements */
 
 
   & > :first-child { /* Ajout Du padding a droite et à gauche pour le Texte du Collapse */

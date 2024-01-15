@@ -49,6 +49,7 @@
 }
 
 .single-image {
+    padding-bottom: 28px; /* Ajout pour le cas ou il n'y a qu'une image */
     .Wrapper-Carrousel_ArrowLeft,
     .Wrapper-Carrousel_ArrowRight,
     .Counter {

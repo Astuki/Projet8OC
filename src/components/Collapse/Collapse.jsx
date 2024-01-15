@@ -16,9 +16,9 @@ const Collapse = ({ title, content }) => {
   
       if (isOpen) {
           if (screenWidth > 800) {
-              setHeight(ref.current?.getBoundingClientRect().height * 1.4);
+              setHeight(ref.current?.getBoundingClientRect().height * 1.5); /* Ajout Changed the height because of the added padding left and Right */
           } else {
-              setHeight(ref.current?.getBoundingClientRect().height + 25);
+              setHeight(ref.current?.getBoundingClientRect().height + 30); /* Ajout Changed the height because of the added padding left and Right */
           }
       } else {
           setHeight(0);
@@ -26,6 +26,21 @@ const Collapse = ({ title, content }) => {
   }, [isOpen]);
 
     const [height, setHeight] = useState(0)
+
+
+    /* Ajout pour forcer le render dans un <ul> */
+    const renderContent = () => {
+      if (Array.isArray(content)) {
+        return (
+          <ul>
+            {content}
+          </ul>
+        );
+      } else {
+        return <p>{content}</p>;
+      }
+    }
+    /* Fin de l'ajout */
 
     return (
       <div key={title} onClick={toggleCollapse} className="collapse-container">
@@ -43,7 +58,7 @@ const Collapse = ({ title, content }) => {
         >
 
         <div ref={ref}>
-          <p>{content}</p>
+          {renderContent()}
         </div>
 
         </div>
@@ -52,5 +67,3 @@ const Collapse = ({ title, content }) => {
   };
   
   export default Collapse;
-
-  /** Styling  */

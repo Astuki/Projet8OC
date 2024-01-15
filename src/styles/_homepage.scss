@@ -22,18 +22,10 @@ body{
     gap: 25px;
     justify-items: center;
     align-items: center;
-    @media screen and (min-width: 1200px) {
-        width: 90%;
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        grid-template-rows: repeat(2, 1fr);
-        gap: 50px 0px;
-        background-color: $secondary-color;
-        padding: 35px 0px 35px 0px;
-    }
-    @media screen and (min-width: 1600px) {
-        grid-template-columns: repeat(4, 1fr);
-        grid-template-rows: repeat(2, 1fr);
+    width: 90%;
+    grid-template-columns: repeat(auto-fill, minmax(335px, 1fr)); /* Auto fill added pour les tailles d'écran intermédiaire sauf pour le fold et inférieur Media-Queries */
+    @media screen and (max-width: 375px) {
+        grid-template-columns: 1fr;
     }
 }
 

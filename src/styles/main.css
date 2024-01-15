@@ -1,3 +1,4 @@
+@charset "UTF-8";
 body {
   font-family: "Montserrat", sans-serif;
 }
@@ -32,6 +33,16 @@ body {
     font-size: 160px;
   }
 }
+@media screen and (max-width: 780px) {
+  .main-Wrapper_Error {
+    font-size: 160px;
+  }
+}
+@media screen and (max-width: 400px) {
+  .main-Wrapper_Error { /* Ajout car le 404 dépassait si écran < 360px */
+    font-size: 120px;
+  }
+}
 .main-Wrapper_Text {
   font-size: 36px;
   font-weight: 400;
@@ -45,6 +56,7 @@ body {
 .main-Wrapper_Link {
   color: inherit;
   font-size: 20px;
+  text-align: center; /* Ajout le texte n'est plus centré < 300px */
 }
 
 body {
@@ -72,22 +84,12 @@ body {
   gap: 25px;
   justify-items: center;
   align-items: center;
+  width: 90%;
+  grid-template-columns: repeat(auto-fill, minmax(335px, 1fr)); /* Auto fill added pour les tailles d'écran intermédiaire sauf pour le fold et inférieur Media-Queries */
 }
-@media screen and (min-width: 1200px) {
+@media screen and (max-width: 375px) {
   .grid {
-    width: 90%;
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(2, 1fr);
-    gap: 50px 0px;
-    background-color: #f7f7f7;
-    padding: 35px 0px 35px 0px;
-  }
-}
-@media screen and (min-width: 1600px) {
-  .grid {
-    grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: repeat(2, 1fr);
+    grid-template-columns: 1fr;
   }
 }
 
@@ -107,6 +109,8 @@ body {
   align-items: center;
   flex-direction: column;
   padding-bottom: 25px;
+  margin-left: 5%;
+  margin-right: 5%;
 }
 
 .main-wrapper-logement {
@@ -116,14 +120,14 @@ body {
 }
 
 .main-wrapper-logement > .header {
-  width: 95%;
+  width: 90%;
 }
 
 .about-collapse-container {
   padding-top: 15px;
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: 25px; /* Ajout Increased the gap between Collapse Components */
   width: 90%;
 }
 
@@ -168,7 +172,6 @@ body {
   .with-carrousel {
     justify-content: space-between;
     width: 90%;
-    max-width: 1152px;
   }
 }
 
@@ -187,10 +190,9 @@ body {
   overflow: hidden;
   text-overflow: ellipsis;
   max-width: 210px;
-  padding-left: 5px;
+  padding-left: 15px; /* Ajout padding des cards 5px -> 15px */
 }
 .cards_img {
-  filter: brightness(75%);
   -o-object-fit: cover;
      object-fit: cover;
   width: 335px;
@@ -199,17 +201,30 @@ body {
 }
 @media screen and (max-width: 374px) {
   .cards_img {
-    max-width: 252px;
+    max-width: 250px;
     height: 180px;
   }
-}
-.cards_img:hover {
-  filter: brightness(90%);
 }
 
 .cards:hover {
   cursor: pointer;
-  transform: scale(1.05);
+  transform: scale(1.05); /* " Ajout " Je me permets de laisser le scale onHover */
+}
+
+/* Ajout du Gradient + pour Fold ( tailles < 375px */
+.cards::before {
+  content: "";
+  position: absolute;
+  width: 335px;
+  height: 255px;
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgba(0, 0, 0, 0.5) 100%); /* Ajout Gradient récupéré du Figma directement + supression de mes filters onhover et de base */
+  border-radius: 15px;
+}
+@media screen and (max-width: 374px) {
+  .cards::before {
+    max-width: 250px;
+    height: 180px;
+  }
 }
 
 .footer {
@@ -280,7 +295,7 @@ li {
 }
 
 .wrapper-logementsDesc {
-  width: 90%;
+  width: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -390,32 +405,28 @@ li {
   align-items: center;
   justify-content: center;
   margin-top: 15px;
+  width: 100%;
 }
 .Wrapper-Carrousel_carrouselImg {
-  filter: brightness(75%); /** Bug See Below */
+  filter: brightness(85%); /** Bug See Below + Kept the brightness to make it easier to see the white Counter and Arrows */
   border-radius: 25px;
-  max-height: 400px;
-  width: 90%;
+  width: 100%;
   -o-object-fit: cover;
      object-fit: cover;
   aspect-ratio: 3/1;
 }
 @media screen and (max-width: 700px) {
   .Wrapper-Carrousel_carrouselImg {
-    height: 250px;
-    -o-object-fit: cover;
-       object-fit: cover;
-    border-radius: 15px;
-    width: 90%;
+    height: 230px;
   }
 }
 .Wrapper-Carrousel_ArrowRight {
-  position: relative;
+  position: absolute;
   right: 8%;
   width: 14px;
 }
 .Wrapper-Carrousel_ArrowLeft {
-  position: relative;
+  position: absolute;
   left: 8%;
   z-index: 1; /** Bug without the z-index Arrow disappear when filter brightness is applied BUT it's only on the left Arrow ? */
   width: 14px;
@@ -466,9 +477,8 @@ li {
 .collapse-container__title {
   background-color: #ff6060;
   border-radius: 10px;
-  padding: 10px 0 10px 0;
+  padding: 10px 0 10px 0px;
   color: white;
-  text-align: left;
   width: 100%;
   display: flex;
   justify-content: space-between;
@@ -480,6 +490,9 @@ li {
 }
 .collapse-container__title--open svg {
   rotate: 180deg;
+}
+.collapse-container__title-txt {
+  padding-left: 15px; /* Ajout Padding to the collapse Title  */
 }
 .collapse-container__content {
   background-color: #f6f6f6;
@@ -545,5 +558,13 @@ li {
   width: 100%;
   border-radius: 0px 0px 5px 5px;
   background-color: #f7f7f7;
-  padding-top: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  max-height: 160px; /* Ajout de cette max-height pour que les 2 background gris des Collapse soient tout les deux au même niveau ( dans logement ) */
+}
+.collapse-container__content--open > :first-child { /* Ajout Du padding a droite et à gauche pour le Texte du Collapse */
+  padding-left: 10px;
+  padding-right: 10px;
+  font-size: 15px;
 }/*# sourceMappingURL=Main.css.map */

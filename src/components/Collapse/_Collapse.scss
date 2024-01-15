@@ -5,21 +5,23 @@
   &__title {
     background-color: #ff6060;
     border-radius: 10px;
-    padding: 10px 0 10px 0;
+    padding: 10px 0 10px 0px;
     color: white;
-    text-align: left;
     width: 100%;
     display: flex;
     justify-content: space-between;
     align-items: center;
     font-size: 24px;
-
     svg {
       transition: 200ms;
     }
 
     &--open svg {
       rotate: 180deg;
+    }
+
+    &-txt{
+      padding-left: 15px; /* Ajout Padding to the collapse Title  */
     }
   }
 
@@ -95,5 +97,17 @@
   width: 100%;
   border-radius: 0px 0px 5px 5px;
   background-color: $secondary-color;
-  padding-top: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+
+
+  max-height: 160px; /* Ajout de cette max-height pour que les 2 background gris des Collapse soient tout les deux au même niveau ( dans logement ) */
+
+
+  & > :first-child { /* Ajout Du padding a droite et à gauche pour le Texte du Collapse */
+    padding-left: 10px;
+    padding-right: 10px;
+    font-size: 15px;
+  }
 }

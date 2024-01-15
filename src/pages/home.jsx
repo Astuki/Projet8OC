@@ -5,6 +5,8 @@ import Banner from '../components/Banner/Banner';
 
 import React from "react";
 import ReefBg from "../assets/homepageBg.png"
+
+/* Json Imported Here */
 import logements from '../jsondata/logements.json'; 
 
 export default function Home() {
@@ -12,7 +14,7 @@ export default function Home() {
             <div className='main-wrapper'>
                 <Header />  
                 <main className='container-homepage'>
-                    <Banner imageUrl={ReefBg} showText={true}/>
+                    <Banner imageUrl={ReefBg} />
                     <section className='grid'>
                     {logements.map((logement) => (
                         <Cards key={logement.id} id={logement.id} title={logement.title} cover={logement.cover} />

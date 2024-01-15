@@ -7,6 +7,8 @@ body {
     align-items: center;
     flex-direction: column;
     padding-bottom: 25px;
+    margin-left: 5%;
+    margin-right: 5%;
 }
 .main-wrapper-logement{
     display: flex;
@@ -14,13 +16,13 @@ body {
     flex-direction: column;
 }
 .main-wrapper-logement > .header{
-    width: 95%;
+    width: 90%;
 }
 
 .about-collapse-container{
     padding-top: 15px;
     display: flex;
     flex-direction: column;
-    gap: 10px;
+    gap: 25px; /* Ajout Increased the gap between Collapse Components */
     width: 90%;
 }
